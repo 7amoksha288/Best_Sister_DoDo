@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Lovers+Quarrel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Love Ya Like A Sister", cursive;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.heart {
+  fill: none;
+  stroke-width: 1px;
+  stroke: rgb(255,47,47);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 7px #ff000d);
+  margin-bottom: 20px;
+}
+
+.heart path {
+  stroke-dasharray: 67;
+  stroke-dashoffset: 0;
+}
+
+.heart:hover path {
+  animation: animate-heart 2s linear forwards;
+}
+
+@keyframes animate-heart {
+  0% {
+      stroke-dashoffset: 0;
+  }
+  40% {
+      stroke-dashoffset: 67;
+  }
+  80% {
+      stroke-dashoffset: 134;
+      fill: transparent;
+  }
+  100% {
+      stroke-dashoffset: 134;
+      fill: rgb(255,47,47);
+  }
+}
+
+.message {
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+  transition: opacity 2s ease;
+  display: none;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #ff000d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e60000;
+}
+
+#nextButton {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #ff000d;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 102, 204, 0.5);
+  opacity: 0; 
+  transition: opacity 2s ease;
+}
+
+.fade-in {
+  opacity: 1 !important; 
+}
+
+.finalMessage {
+  font-size: 32px;
+  color: #ff1493;
+  white-space: pre-line;
+  overflow: hidden;
+  display: none;
+  transition: opacity 2s ease;
+}
+
+.birthdayMessage {
+  display: none; 
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 2s ease; 
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 1; 
+}
+
+.happyBirthday {
+  font-size: 155px; 
+  color: #ff1493;
+}
+
+
+.yourBrother {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  }
+
+
+
+
